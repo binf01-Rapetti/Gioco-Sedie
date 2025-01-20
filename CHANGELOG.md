@@ -14,6 +14,7 @@ CHANGELOG
    - La scrittura nel file è sincronizzata per evitare conflitti tra i thread.
 
 # File modificati:
+
 - TestGiocoSedie.java: Aggiunta interazione per impostare numero di partecipanti e sedie.
 - Partecipante.java: Aggiunto metodo per salvare i risultati in Risultato.txt.
 
