@@ -1,34 +1,36 @@
 package GiocoSedieRapetti;
 
+import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class TestGiocoSedie {
-    private final static int NUMSEDIE = 15; // Numero di sedie nel gioco
     private static Logger logger = Logger.getLogger("GiocoSedie.TestGiocoSedie");
 
-    /**
-     * Metodo principale che avvia il gioco.
-     * @param args Gli argomenti da linea di comando (non utilizzati in questa applicazione).
-     */
     public static void main(String[] args) {
-        Posto sedie[] = new Posto[NUMSEDIE]; // Crea un array di sedie
+        Scanner scanner = new Scanner(System.in);
 
-        // Inizializza ogni posto come libero
-        for (int k = 0; k < sedie.length; k++)
+        // Chiediamo all'utente di inserire il numero di sedie e partecipanti
+        System.out.print("Inserisci il numero di sedie: ");
+        int numSedie = scanner.nextInt(); // Numero di sedie
+        System.out.print("Inserisci il numero di partecipanti: ");
+        int numPartecipanti = scanner.nextInt(); // Numero di partecipanti
+
+        Posto sedie[] = new Posto[numSedie]; // Array di sedie
+
+        // Inizializziamo ogni sedia come libera
+        for (int k = 0; k < sedie.length; k++) {
             sedie[k] = new Posto();
+        }
 
         Display display = new Display(sedie);
         logger.info("Sto facendo partire il Display.\n");
-        display.start(); // Avvia il thread che gestisce la visualizzazione dello stato del gioco
+        display.start(); // Avviamo il thread che mostra lo stato delle sedie
 
-        // Crea i partecipanti (thread)
-        Partecipante array[] = new Partecipante[NUMSEDIE + 1]; // +1 perché ci sono più partecipanti che sedie
-        for (int i = 0; i < NUMSEDIE + 1; i++) {
-            array[i] = new Partecipante(sedie);
-            logger.info("Sto facendo partire il thread id: " + array[i].getId() + " name: " + array[i].getName() + "\n");
-            array[i].start(); // Avvia ogni thread partecipante
+        // Creiamo i thread partecipanti
+        Partecipante partecipanti[] = new Partecipante[numPartecipanti];
+        for (int i = 0; i < numPartecipanti; i++) {
+            partecipanti[i] = new Partecipante(sedie);
+            partecipanti[i].start(); // Avviamo ogni thread partecipante
         }
     }
 }
-
- 
