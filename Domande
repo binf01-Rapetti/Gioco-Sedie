@@ -11,6 +11,7 @@
         Scanner scanner = new Scanner(System.in);
         Posto sedie[] = new Posto[numSedie];
         Display display = new Display(sedie);
+        br = new BufferedWriter(
 
 
 
@@ -18,7 +19,6 @@
 
 Una classe anonima è una classe senza nome, definita e istanziata direttamente nel codice. Generalmente, viene utilizzata per implementare interfacce o estendere classi in modo inline.
 
-Nel codice: Non ci sono classi anonime. Tutte le classi sono definite esplicitamente con un nome (Posto, Partecipante, Display, ecc.).
 
 
 
