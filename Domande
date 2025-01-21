@@ -120,4 +120,5 @@ try {
 
 
 2. Come gestirle:
+
 - Le eccezioni vengono gestite con blocchi try-catch-finally, utilizzando log per segnalare eventuali errori.
