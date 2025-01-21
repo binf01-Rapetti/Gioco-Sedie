@@ -93,6 +93,12 @@ throw new RuntimeException(e);
 
 
 
+try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))) {
+            writer.write(risultato);
+        } catch (IOException e) {
+            throw new RuntimeException("Errore durante la scrittura del file: " + FILE_NAME, e);
+        }
+
 
 2. Come gestirle:
 - Le eccezioni vengono gestite con blocchi try-catch-finally, utilizzando log per segnalare eventuali errori.
