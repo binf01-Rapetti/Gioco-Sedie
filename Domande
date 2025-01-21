@@ -19,6 +19,8 @@
 
 Una classe anonima è una classe senza nome, definita e istanziata direttamente nel codice. Generalmente, viene utilizzata per implementare interfacce o estendere classi in modo inline.
 
+ new FileWriter(nomeFile));
+
 
 
 
