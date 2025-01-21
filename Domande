@@ -76,14 +76,14 @@ mandata quando si lavora con file nella classe Scrittore
 
 1. Parti interessate:
 
-Classe scrittore
+CLASSE SCRITTORE
 
  catch (IOException ex) {
                 Logger.getLogger(Scrittore.class.getName()).log(Level.SEVERE, null, ex);
             }
 
 
-Classe partecipante
+CLASSE PARTECIPANTE
 
 try { sleep((int) (Math.random() * 1000));   
 ....
@@ -106,6 +106,17 @@ try {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
+
+CLASSE DISPLAY
+
+try {
+            while (!endgame) {
+          ....
+                catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
 
 
 2. Come gestirle:
