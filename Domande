@@ -83,6 +83,14 @@ Classe scrittore
             }
 
 
+Classe partecipante
+
+try { sleep((int) (Math.random() * 1000));   
+....
+catch (InterruptedException e) { 
+throw new RuntimeException(e);
+}
+
 
 
 
