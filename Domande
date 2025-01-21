@@ -8,10 +8,8 @@
 -   FileWriter nella classe Scrittore
 
 2. Istanze esplicite:
-- Le istanze esplicite sono quelle create con il costruttore direttamente, ad esempio:
-sedielk] = new Posto();
-display = new Display (sedie);
-arrayli] = new Partecipante (sedie);
+        Scanner scanner = new Scanner(System.in);
+
 
 
 
