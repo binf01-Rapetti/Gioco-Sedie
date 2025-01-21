@@ -100,5 +100,13 @@ try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME, true))
         }
 
 
+try {
+            sleep((int) (Math.random() * 1000)); 
+....
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
 2. Come gestirle:
 - Le eccezioni vengono gestite con blocchi try-catch-finally, utilizzando log per segnalare eventuali errori.
