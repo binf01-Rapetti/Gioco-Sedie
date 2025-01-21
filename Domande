@@ -1,0 +1,81 @@
+3.1) Quali oggetti vengono istanziati? Quali di questi hanno una istanza esplicita?
+
+1. Oggetti istanziati:
+-   Posto[] sedie (array di oggetti della classe Posto) nella classe TestGiocoSedie
+-   Partecipantel] array (array di oggetti della classe Partecipante) nella classe TestGiocoSedie
+-   Display nella classe TestGiocoSedie
+-   BufferedWriter nella classe Scrittore nel metodo scrivi
+-   FileWriter nella classe Scrittore
+
+2. Istanze esplicite:
+- Le istanze esplicite sono quelle create con il costruttore direttamente, ad esempio:
+sedielk] = new Posto();
+display = new Display (sedie);
+arrayli] = new Partecipante (sedie);
+
+
+
+3.2) Esistono classi anonime? Definisci il concetto di classe anonima.
+
+Una classe anonima è una classe senza nome, definita e istanziata direttamente nel codice. Generalmente, viene utilizzata per implementare interfacce o estendere classi in modo inline.
+
+Nel codice: Non ci sono classi anonime. Tutte le classi sono definite esplicitamente con un nome (Posto, Partecipante, Display, ecc.).
+
+
+
+3.3) Quali sono le classi che lavorano in concorrenza? Quanti sono i thread in memoria?
+
+1. Classi concorrenti:
+-   Partecipante (ogni partecipante è un thread che cerca di occupare un posto)
+-   Display (thread che visualizza lo stato delle sedie in tempo reale)
+
+2. Numero di thread in memoria:
+Nel programma Il numero di thread sarebbe la somma di 1 (Main) + 1 (Display) + Numero dei Partecipanti
+
+
+
+3.4) Quali sono i metodi della classe Thread che vengono usati?
+
+1. Metodi usati:
+
+- start: Avvia l'esecuzione di un thread.
+- display.start();
+- array[il.start();
+- run: Contiene il codice eseguito dal thread.
+-  sleep: Fa attendere il thread per un certo periodo (come nel metodo run di Partecipante e Display).
+
+
+
+3.5) Quale è la classe Monitor? Perché e a cosa serve
+
+1. La classe Posto sarebbe la classe monitor dato che funge da “monitor”
+
+Un monitor è una struttura che permette a più thread di accedere in modo sicuro a una risorsa condivisa. La sincronizzazione in Posto è garantita dai metodi
+synchronized.
+
+2. Perché e a cosa serve?
+
+Serve a proteggere la risorsa condivisa (le sedie) dall'accesso concorrente, evitando che due thread occupano la stessa sedia contemporaneamente.
+
+
+
+3.6) Quali eccezioni sono usate nell'applicazione? Di che tipo sono?
+
+1. Eccezioni:
+
+- InterruptedException: 
+Mandata da Thread.sleep () (usata in Partecipante e Display)
+
+- IOException: 
+mandata quando si lavora con file nella classe Scrittore
+
+
+
+3.7) Come si gestiscono le eccezioni? Individua le parti di codice interessate.
+
+1. Parti interessate:
+
+
+
+2. Come gestirle:
+- Le eccezioni vengono gestite con blocchi try-catch-finally, utilizzando log per segnalare eventuali errori.
