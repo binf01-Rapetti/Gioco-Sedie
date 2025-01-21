@@ -1,0 +1,43 @@
++-----------------------+
+|        Posto          |
++-----------------------+
+| - occupato: boolean   |
++-----------------------+
+| + Posto()             |
+| + libero(): boolean   |
+| + occupa(): boolean   |
++-----------------------+
+
++-----------------------+
+|       Display         |
++-----------------------+
+| - sedie: Posto[]      |
+| - endgame: boolean    |
++-----------------------+
+| + Display(sedie: Posto[]) |
+| + run(): void          |
++-----------------------+
+
++-----------------------+
+|     Partecipante      |
++-----------------------+
+| - sedie: Posto[]      |
+| - FILE_NAME: String   |
++-----------------------+
+| + Partecipante(sedie: Posto[]) |
+| + run(): void          |
+| - salvaRisultato(risultato: String): void |
++-----------------------+
+
++-----------------------+
+|    TestGiocoSedie     |
++-----------------------+
+| - logger: Logger      |
++-----------------------+
+| + main(args: String[]): void |
++-----------------------+
+
+RELATIONI:
+- TestGiocoSedie dipende da Display, Partecipante, Posto.
+- Display contiene un array di Posto.
+- Partecipante contiene un array di Posto.
