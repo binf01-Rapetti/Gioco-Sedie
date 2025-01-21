@@ -10,7 +10,7 @@
 2. Istanze esplicite:
         Scanner scanner = new Scanner(System.in);
         Posto sedie[] = new Posto[numSedie];
-
+        Display display = new Display(sedie);
 
 
 
