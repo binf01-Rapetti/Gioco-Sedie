@@ -76,6 +76,14 @@ mandata quando si lavora con file nella classe Scrittore
 
 1. Parti interessate:
 
+Classe scrittore
+
+ catch (IOException ex) {
+                Logger.getLogger(Scrittore.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+
+
 
 
 2. Come gestirle:
