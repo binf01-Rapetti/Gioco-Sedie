@@ -1,24 +1,46 @@
-+------------------+             +------------------+
-|  TestGiocosedie  |             |  Partecipante    |
-+------------------+             +------------------+
-| - NUMSEDIE: int  |             | ~ sedie: Posto[] |
-| - logger: Logger |             +------------------+
-+------------------+             | + Partecipanti(sedie: Posto[]) |
-| + Giocosedie(NUMSEDIE: int) |  | + run(): void    |
-| + main(): void   |             +------------------+
-+------------------+  
++-------------------------+
+|    TestGiocoSedie       |
++-------------------------+
+| - logger: Logger        |
++-------------------------+
+| + main(args: String[]): void |
++-------------------------+
+        |
+        | utilizza
+        v
++-------------------------+
+|     Posto               |
++-------------------------+
+| - occupato: boolean     |
++-------------------------+
+| + libero(): boolean     |
+| + occupa(): boolean     |
++-------------------------+
+        |
+        | utilizzato da
+        v
++-------------------------+
+|     Partecipante        |
++-------------------------+
+| - sedie: Posto[]        |
+| - FILE_NAME: String     |
++-------------------------+
+| + run(): void           |
+| + salvaRisultato(): void|
++-------------------------+
+        |
+        | utilizza
+        v
++-------------------------+
+|      Display            |
++-------------------------+
+| - sedie: Posto[]        |
+| - endgame: boolean      |
++-------------------------+
+| + run(): void           |
++-------------------------+
 
-+------------------+           +------------------+
-|    Display       |           |      Posto       |
-+------------------+           +------------------+
-|- endgame: boolean|           | + libero(): boolean |
-|- sedie: Posto[]  |           | + occupa(): boolean |
-+------------------+           | + Posto()        |
-| + Display(sedie: Posto[]) |  +------------------+
-| + run(): void.   |         
-+------------------+  
+Relazioni tra le classi:
 
-RELATIONI:
-- TestGiocoSedie dipende da Display, Partecipante, Posto.
-- Display contiene un array di Posto.
-- Partecipante contiene un array di Posto.
+- TestGiocoSedie interagisce con Posto, Partecipante e Display.
+- Partecipante e Display interagiscono con Posto per gestire lo stato delle sedie.
