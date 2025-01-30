@@ -1,41 +1,22 @@
-+-----------------------+
-|        Posto          |
-+-----------------------+
-| - occupato: boolean   |
-+-----------------------+
-| + Posto()             |
-| + libero(): boolean   |
-| + occupa(): boolean   |
-+-----------------------+
++------------------+             +------------------+
+|  TestGiocosedie  |             |  Partecipante    |
++------------------+             +------------------+
+| - NUMSEDIE: int  |             | ~ sedie: Posto[] |
+| - logger: Logger |             +------------------+
++------------------+             | + Partecipanti(sedie: Posto[]) |
+| + Giocosedie(NUMSEDIE: int) |  | + run(): void    |
+| + main(): void   |             +------------------+
++------------------+  
 
-+-----------------------+
-|       Display         |
-+-----------------------+
-| - sedie: Posto[]      |
-| - endgame: boolean    |
-+-----------------------+
-| + Display(sedie: Posto[]) |
-| + run(): void          |
-+-----------------------+
-
-+-----------------------+
-|     Partecipante      |
-+-----------------------+
-| - sedie: Posto[]      |
-| - FILE_NAME: String   |
-+-----------------------+
-| + Partecipante(sedie: Posto[]) |
-| + run(): void          |
-| - salvaRisultato(risultato: String): void |
-+-----------------------+
-
-+-----------------------+
-|    TestGiocoSedie     |
-+-----------------------+
-| - logger: Logger      |
-+-----------------------+
-| + main(args: String[]): void |
-+-----------------------+
++------------------+           +------------------+
+|    Display       |           |      Posto       |
++------------------+           +------------------+
+|- endgame: boolean|           | + libero(): boolean |
+|- sedie: Posto[]  |           | + occupa(): boolean |
++------------------+           | + Posto()        |
+| + Display(sedie: Posto[]) |  +------------------+
+| + run(): void.   |         
++------------------+  
 
 RELATIONI:
 - TestGiocoSedie dipende da Display, Partecipante, Posto.
